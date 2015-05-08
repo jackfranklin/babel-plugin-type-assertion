@@ -78,7 +78,7 @@ AssertionInjector.prototype.run = function () {
 
 AssertionInjector.prototype.insertImport = function () {
   var specifiers = [t.importSpecifier(t.identifier('assert'), t.identifier(ASSERT_NAME), '')];
-  var declaration = t.importDeclaration(specifiers, t.literal('rtts_assert/es6/src/rtts_assert'));
+  var declaration = t.importDeclaration(specifiers, t.literal('rtts_compiled.js'));
   this.node.body.unshift(declaration);
   // Update scope and path.
   this.path.setScope();
